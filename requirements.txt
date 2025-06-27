@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+streamlit
+requests
+google-auth
+google-api-python-client
+dateparser
