@@ -8,7 +8,9 @@ user_input = st.text_input("🗣️ Say something to book a slot (e.g. 'Book a m
 if user_input:
     with st.spinner("Talking to the calendar agent..."):
         try:
-            response = requests.post("http://localhost:8000/chat/", json={"user_input": user_input})
+            
+            response = requests.post("https://tailortalk-final.onrender.com/chat/", json={"user_input": user_input})
+
             response.raise_for_status()
             st.success(response.json()["response"])
         except requests.exceptions.RequestException as e:
